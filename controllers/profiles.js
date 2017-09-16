@@ -28,11 +28,12 @@ function saveProfile (req, res) {
 
 	let profile = new Profile()
 
-	profile.name   = req.body.name
-	profile.email  = req.body.email
-	profile.place  = req.body.place
-	profile.game   = req.body.game
-	profile.bio    = req.body.bio
+	profile.name     = req.body.name
+	profile.email    = req.body.email
+	profile.password = req.body.password
+	profile.place    = req.body.place
+	profile.game     = req.body.game
+	profile.bio      = req.body.bio
 
 	profile.save((err, profileStored) => {
 		if (err) res.status(500).send({message: `Error al salvar en la base de datos ${err}`})
