@@ -5,11 +5,11 @@ var Schema = mongoose.Schema
 // define the schema for our user model
 var userSchema = new Schema({
 
-    username: String,
+    name: String,
     email: { type: String, unique: true, lowercase: true },
     password: { type: String, select: false },
     signupDate: { type: Date, default: Date.now() },
-    game: {type: Strin, enum['world of warcraft', 'league of legends', 'overwatch, dota', 'starcraft 2']},
+    game: {type: String, enum['world of warcraft', 'league of legends', 'overwatch, dota', 'starcraft 2']},
     place: String,
     bio: String,
     lastLogin: Date

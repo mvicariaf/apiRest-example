@@ -31,8 +31,8 @@ function saveProfile (req, res) {
 	profile.name     = req.body.name
 	profile.email    = req.body.email
 	profile.password = req.body.password
-	profile.place    = req.body.place
 	profile.game     = req.body.game
+	profile.place    = req.body.place
 	profile.bio      = req.body.bio
 
 	profile.save((err, profileStored) => {
